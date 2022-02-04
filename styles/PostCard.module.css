@@ -1,0 +1,22 @@
+.author {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+.btn {
+  background-color: blueviolet;
+  width: 100%;
+  padding: 1rem 2rem;
+  color: whitesmoke;
+  border-radius: 30px;
+}
+.card {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

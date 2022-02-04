@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  background-color: wheat;
 }
 
 .main {
@@ -106,6 +107,13 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+.postContainer {
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  height: auto;
+  color: black;
 }
 
 @media (max-width: 600px) {

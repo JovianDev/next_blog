@@ -1,0 +1,28 @@
+.linkBtn {
+  width: 100%;
+  padding: 0;
+  color: blueviolet;
+}
+.post {
+  margin: 1rem;
+}
+.postImg {
+  border-radius: 50%;
+}
+.postWidgetContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: whitesmoke;
+  width: 100%;
+  /* height: auto; */
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem;
+}
+.title {
+  width: 100%;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid yellowgreen;
+}
