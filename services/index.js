@@ -136,3 +136,18 @@ export const getCategories = async () => {
     console.log('Error fetching categories ', error);
   }
 };
+
+export const submitComment = async (obj) => {
+  try {
+    const result = await fetch('/api/comments', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(obj),
+    });
+    return result.json;
+  } catch (error) {
+    console.log(error);
+  }
+};
