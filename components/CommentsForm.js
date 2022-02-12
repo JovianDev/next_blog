@@ -36,8 +36,8 @@ function CommentsForm({ slug }) {
       window.localStorage.removeItem('email', email);
     }
     submitComment(commentObject).then((res) => {
+      commentElement.current.value = '';
       setShowSuccessMessage(true);
-
       setTimeout(() => {
         setShowSuccessMessage(false);
       }, 3000);

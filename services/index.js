@@ -118,6 +118,37 @@ export const getSimilarPosts = async (categories, slug) => {
     console.log('Error fetching similar posts ', error);
   }
 };
+export const getFeaturedPosts = async () => {
+  try {
+    const query = gql`
+      query GetFeaturedPosts {
+        posts(
+          where: {
+            featured_post = true
+            
+          }
+        ) {
+          title
+          author{
+            name
+            photo{
+              url
+            }
+          }
+          featuredImage {
+            url
+          }
+          createdAt
+          slug
+        }
+      }
+    `;
+    const results = await request(graphqlAPI, query);
+    return results.featuredPosts;
+  } catch (error) {
+    console.log('Error fetching featured posts ', error);
+  }
+};
 
 export const getCategories = async () => {
   try {
@@ -149,5 +180,24 @@ export const submitComment = async (obj) => {
     return result.json;
   } catch (error) {
     console.log(error);
+  }
+};
+
+export const getComments = async (slug) => {
+  try {
+    const query = gql`
+      query GetComments($slug: String!) {
+        comments(where: { post: { slug: $slug } }) {
+          name
+          createdAt
+          comment
+        }
+      }
+    `;
+    const results = await request(graphqlAPI, query, { slug });
+    console.log('RESULTS', results);
+    return results.comments;
+  } catch (error) {
+    console.log('Error fetching comments ', error);
   }
 };
