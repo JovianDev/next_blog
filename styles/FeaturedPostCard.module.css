@@ -1,0 +1,9 @@
+.featuredPostCardContainer {
+  width: 80%;
+  height: 8rem;
+  margin: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+}

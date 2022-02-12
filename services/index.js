@@ -122,16 +122,11 @@ export const getFeaturedPosts = async () => {
   try {
     const query = gql`
       query GetFeaturedPosts {
-        posts(
-          where: {
-            featured_post = true
-            
-          }
-        ) {
+        posts(where: { featuredPost: true }) {
           title
-          author{
+          author {
             name
-            photo{
+            photo {
               url
             }
           }
@@ -144,7 +139,8 @@ export const getFeaturedPosts = async () => {
       }
     `;
     const results = await request(graphqlAPI, query);
-    return results.featuredPosts;
+    console.log('F RESULTS', results);
+    return results;
   } catch (error) {
     console.log('Error fetching featured posts ', error);
   }
@@ -161,7 +157,7 @@ export const getCategories = async () => {
       }
     `;
     const results = await request(graphqlAPI, query);
-    console.log('RESULTS', results);
+    // console.log('RESULTS', results);
     return results.categories;
   } catch (error) {
     console.log('Error fetching categories ', error);
@@ -195,7 +191,7 @@ export const getComments = async (slug) => {
       }
     `;
     const results = await request(graphqlAPI, query, { slug });
-    console.log('RESULTS', results);
+    // console.log('RESULTS', results);
     return results.comments;
   } catch (error) {
     console.log('Error fetching comments ', error);
