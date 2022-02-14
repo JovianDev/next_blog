@@ -1,0 +1,154 @@
+.btn {
+  transition: all 0.5s ease-in-out;
+  background-color: var(--secondary-light);
+  padding: 1rem 2rem;
+  color: var(--primary-text-dark);
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  border: none;
+}
+.btn:hover {
+  background-color: var(--primary-bright);
+  cursor: pointer;
+}
+.btnContainer {
+  padding: 2rem 0;
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+  width: 100%;
+}
+.btnContainer:hover {
+  animation: select-up 0.5s forwards;
+}
+.checkbox {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.checkboxLabel {
+  color: var(--secondary-text-dark);
+  margin-left: 1rem;
+}
+.checkboxContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.commentsFormContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  background-color: var(--secondary-text-light);
+}
+.commentFormTxtArea {
+  width: 100%;
+}
+.error {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 800;
+  animation: error 4s ease-in-out infinite;
+}
+.input {
+  display: flex;
+  width: 100%;
+  margin: 2rem 0;
+}
+.inputEmail {
+  width: 50%;
+  margin-left: 0.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: none;
+}
+.inputEmail:focus {
+  outline: var(--secondary-text-dark) auto 5px;
+}
+.inputName {
+  width: 50%;
+  margin-right: 0.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: none;
+}
+.inputName:focus {
+  outline: var(--secondary-text-dark) auto 5px;
+}
+.success {
+  color: greenyellow;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-left: 1rem;
+}
+
+.title {
+  color: var(--primary-text-dark);
+  border-bottom: 1px solid var(--secondary-text-dark);
+  width: 100%;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  margin-top: 0;
+}
+.txtArea {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  padding: 1rem;
+  resize: none;
+  font-size: 1.2rem;
+  font-family: inherit;
+  border: none;
+}
+.txtArea:focus {
+  outline: var(--secondary-text-dark) auto 5px;
+}
+@keyframes error {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 40%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes select-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 600px) {
+  .btnContainer {
+    flex-direction: column;
+  }
+  .btn {
+    margin-bottom: 1rem;
+  }
+  .checkbox {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .error {
+    text-align: center;
+  }
+  .input {
+    flex-direction: column;
+    align-items: center;
+  }
+  .input input {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}

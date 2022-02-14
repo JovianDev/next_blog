@@ -13,7 +13,7 @@ function PostWidget({ catagories, slug }) {
         )
       : getRecentPosts().then((result) => setRelatedPosts(result));
 
-    console.log('RELATED POSTS', relatedPosts);
+    //   console.log('RELATED POSTS', relatedPosts);
   }, [slug]);
 
   return (
@@ -23,7 +23,7 @@ function PostWidget({ catagories, slug }) {
       </h3>
       {relatedPosts?.map((post) => (
         <div key={post.title} className={styles.post}>
-          <div>
+          <div className={styles.imgContainer}>
             <img
               className={styles.postImg}
               alt={post.title}
@@ -32,9 +32,14 @@ function PostWidget({ catagories, slug }) {
               src={post.featuredImage.url}
             />
           </div>
-          <div>
+          <div className={styles.dateLink}>
             <p>{moment(post.createdAt).format('MMM DD, YYYY')}</p>
-            <Link href={`/post/${post.slug}`} passHref key={post.title}>
+            <Link
+              href={`/post/${post.slug}`}
+              passHref
+              key={post.title}
+              className={styles.linkContainer}
+            >
               <span className={styles.linkBtn}>{post.title}</span>
             </Link>
           </div>

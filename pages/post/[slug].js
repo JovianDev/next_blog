@@ -6,7 +6,7 @@ import PostWidget from '../../components/PostWidget';
 import Author from '../../components/Author';
 import CommentsForm from '../../components/CommentsForm';
 import Comments from '../../components/Comments';
-import styles from '../../styles/PostDetail.module.css';
+import styles from '../../styles/slug.module.css';
 function PostDetails({ post }) {
   console.log('POST', post);
   return (
@@ -14,8 +14,10 @@ function PostDetails({ post }) {
       <div className={styles.post}>
         <PostDetail post={post} />
         <Author author={post.author} />
-        <CommentsForm slug={post.slug} />
-        <Comments slug={post.slug} />
+        <div className={styles.comments}>
+          <CommentsForm slug={post.slug} />
+          <Comments slug={post.slug} />
+        </div>
       </div>
       <div className={styles.widgets}>
         <PostWidget

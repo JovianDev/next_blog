@@ -1,3 +1,11 @@
+.catagories {
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+.catagories:hover {
+  cursor: pointer;
+  animation: select-up 0.5s ease-in-out forwards;
+}
 .linkBtn {
   width: 100%;
   padding: 0;
@@ -14,8 +22,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: whitesmoke;
-  width: 100%;
+  background-color: var(--secondary-light);
+  width: 80%;
+  font-size: 1.5rem;
   /* height: auto; */
   border-radius: 15px;
   padding: 2rem;
@@ -23,6 +32,15 @@
 }
 .title {
   width: 100%;
+  font-size: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid darkgray;
+  border-bottom: 1px solid var(--secondary-text-dark);
+}
+@keyframes select-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
 }

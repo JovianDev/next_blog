@@ -14,13 +14,15 @@ function Catagories() {
     <div className={styles.categoriesContainer}>
       <h3 className={styles.title}>Categories</h3>
       {categories.map((category) => (
-        <Link
-          href={`/categories/${category.slug}`}
-          passHref
-          key={category.name}
-        >
-          <span>{category.name}</span>
-        </Link>
+        <div className={styles.catagories} key={category.slug}>
+          <Link
+            href={`/categories/${category.slug}`}
+            passHref
+            key={category.name}
+          >
+            <span>{category.name}</span>
+          </Link>
+        </div>
       ))}
     </div>
   );

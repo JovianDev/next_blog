@@ -1,7 +1,13 @@
 .catagories {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  color: var(--secondary-bright);
+  font-weight: 800;
 }
 .container {
-  background-color: blueviolet;
+  /* background-color: var(--secondary-bright); */
+  background-color: var(--secondary-dark);
   width: 100%;
   height: auto;
   padding: 2rem;
@@ -10,7 +16,8 @@
   align-items: center;
 }
 .title {
-  font-size: 3rem;
-  font-weight: 600;
-  color: aqua;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--secondary-bright);
+  /* color: var(--primary-light); */
 }

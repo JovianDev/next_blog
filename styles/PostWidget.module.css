@@ -1,10 +1,31 @@
+.dateLink {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.imgContainer {
+  align-self: center;
+  margin: 0 1rem;
+}
 .linkBtn {
   width: 100%;
+  margin-top: -1rem;
+  font-weight: 700;
   padding: 0;
-  color: blueviolet;
+  color: var(--secondary-dark);
+}
+.linkBtn:hover {
+  cursor: pointer;
+  animation: select-up 0.5s ease-in-out forwards;
 }
 .post {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
   margin: 1rem;
+  width: 100%;
 }
 .postImg {
   border-radius: 50%;
@@ -14,8 +35,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: whitesmoke;
-  width: 100%;
+  background-color: var(--secondary-light);
+  width: 80%;
   /* height: auto; */
   border-radius: 15px;
   padding: 2rem;
@@ -23,6 +44,15 @@
 }
 .title {
   width: 100%;
+  font-size: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid yellowgreen;
+  border-bottom: 1px solid var(--secondary-text-dark);
+}
+@keyframes select-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
 }

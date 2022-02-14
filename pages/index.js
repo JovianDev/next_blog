@@ -22,12 +22,12 @@ export default function Home({ posts }) {
       </Head>
       <FeaturedPosts />
       <div className={styles.postContainer}>
-        <div>
+        <div className={styles.leftContainer}>
           {posts.map((post, i) => (
             <PostCard post={post.node} key={post.title} />
           ))}
         </div>
-        <div>
+        <div className={styles.rightContainer}>
           <PostWidget />
           <Categories />
         </div>
